@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador Interactivo</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- FA -->
+    <script src="https://kit.fontawesome.com/785fb3b0cb.js" crossorigin="anonymous"></script>
+
+    <!-- JS -->
+    <script src="main.js"></script>
+</head>
+
+<body>
+        <header>
+            <h1>ARROW</h1>
+            <nav class="nav-main">
+                <ul class="nav-menu">
+                    <li>
+                        <a href="#">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="#">Productos</a>
+                    </li>
+                    <li>
+                        <a href="#">Contacto</a>
+                    </li>
+                </ul>
+                <div>
+                    <ul>
+                        <li class="submenu">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <div id="carrito">
+                                <table id="lista-carrito">
+                                    <thead>
+                                        <tr>
+                                            <th>Imagen</th>
+                                            <th>Nombre</th>
+                                            <th>Precio</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+
+                                <a href="#" id="vaciar-carrito" class="button">Vaciar Carrito</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+    <div id="lista-productos" class="container">
+            <div class="news-cards">
+                <div>
+                    <img src="imagenes/Buzo oversize 1.webp" alt="News 1">
+                    <h3>Buzo oversized</h3>
+                    <p>$11.000</p>
+                    <a href="#" class="agregar-carrito" data-id="1" >Agregar Al Carrito <i class="fas fa-angle-double-right"></i></a>
+                </div>
+
+                <div>
+                    <img src="imagenes/Buzo Oversize 2.webp" alt="News 2">
+                    <h3>Buzo oversized</h3>
+                    <p>$11.000</p>
+                    <a href="#" class="agregar-carrito" data-id="2">Agregar Al Carrito <i class="fas fa-angle-double-right"></i></a>
+                </div>
+
+                <div>
+                    <img src="imagenes/Saco de paño 1.webp" alt="News 3">
+                    <h3>Saco De Paño</h3>
+                    <p>$35.000</p>
+                    <a href="#" class="agregar-carrito" data-id="3">Agregar Al Carrito <i class="fas fa-angle-double-right"></i></a>
+                </div>
+
+                <div>
+                    <img src="imagenes/Trench euro.webp" alt="News 4">
+                    <h3>Trench Euro</h3>
+                    <p>$32.000</p>
+                    <a href="#" class="agregar-carrito" data-id="4">Agregar Al Carrito
+                </div>
+    </div>
+
+        <footer>
+            <section class="social">
+                <p>Seguinos en :</p>
+                <div class="links">
+                    <a href="#">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </section>
+        </footer>
+</body>
+
+</html>
