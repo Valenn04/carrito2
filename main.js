@@ -4,6 +4,7 @@ const productos = document.getElementById("lista-productos")
 const listaProductos = document.querySelector("#lista-carrito tbody")
 const btnVaciarCarrito = document.getElementById("vaciar-carrito")
 
+
 //listener
 
 cargarEventlistener();
@@ -13,6 +14,7 @@ function cargarEventlistener() {
     carrito.addEventListener("click", eliminarProdcuto);
     btnVaciarCarrito.addEventListener("click",VaciarCarrito);
     document.addEventListener("DOMContentLoaded", cargarLocalStorage);
+    // btnFinalizarCompra.addEventListener('click',finalizarCompra);
 }
 
 //Funciones
@@ -47,7 +49,7 @@ function insertarCarrito (producto) {
             <td>${producto.titulo}</td>
             <td>${producto.precio}</td>
             <td>
-                <a href="#" class="borrar-producto" data-id="${producto.id}">X</a>
+                <a href="#" class="borrar-producto" id="btn-eliminar" data-id="${producto.id}">X</a>
             </td>
     `;
 
@@ -67,6 +69,20 @@ function eliminarProdcuto(e) {
         productoID = producto.querySelector("a").getAttribute("data-id")
     }
     eliminarProductoLocalStorage(productoID);
+
+    // Sweet Alert
+    $('#btn-eliminar').on('click', function () {
+        Swal.fire({
+            title:'Estas seguro que queres remover este producto?',
+            text: 'Presione Si o No',
+            showCancelBotton: true,
+            confirmButtonColor: '#008f39',
+            cancelButtonColor: '#d33',
+            confirmButtonText:'Si',
+            cancelButtonText: 'No',
+            icon: 'Warning'
+        });
+    });
 }
 
 //Vacia el carrito
@@ -79,6 +95,7 @@ function VaciarCarrito(e) {
     localStorage.removeItem("productos");
     return false;
 }
+
 
 //Guarda los productos del carrito en el LocalStorage
 function guardarProductoLocalStorage(producto) {
